@@ -994,6 +994,7 @@ img {
   color: rgba(117, 117, 117, 0.5);
 }
 
+/*
 .field {
   display: flex;
   align-items: center;
@@ -1063,6 +1064,85 @@ img {
   display: inline-block;
   width: 200px;
   height: 50px;
+
+  color: var(--hero-text-color);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: background-color var(--duration) var(--timing-function);
+}
+
+.submit-button:hover {
+  background-color: var(--accent-color);
+}
+*/
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--primery-text-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.conditions {
+  color: var(--accent-color);
+  margin-left: 5px;
+}
+
+.checkbox-input {
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.checkbox-label::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(33, 33, 33, 1);
+  border-radius: 3px;
+  margin-right: 8px;
+  display: inline-block;
+  transition: background-color var(--duration) var(--timing-function);
+}
+
+.checkbox-input:checked + .checkbox-label::before {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-image: url(../images/icons/check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: background-color var(--duration) var(--timing-function);
+}
+
+.checkbox-input:focus-within ~ .checkbox-label::before {
+  border: 1px solid rgba(33, 150, 243, 1);
+  outline: none;
+  transition: border-color var(--duration) var(--timing-function);
+}
+
+.button-thumb {
+  text-align: center;
+}
+
+.submit-button {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+  padding: 10px 55px;
 
   color: var(--hero-text-color);
   background-color: var(--accent-color);
